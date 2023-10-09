@@ -80,11 +80,13 @@ declare module '@ioc:Adonis/Addons/Rabbit' {
      * @param exchangeName The exchange name
      * @param routingKey A routing key
      * @param content The content
+     * @param options The options
      */
     sendToExchange(
       exchangeName: string,
       routingKey: string,
-      content: any
+      content: any,
+      options?: Options.Publish
     ): Promise<boolean>
 
     /**
